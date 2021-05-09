@@ -14,7 +14,7 @@ The app contains a CSS only carousel that will be usable only on mobile
 
 ## Build
 
-It was build to be executed by only opening the index.html file
+It was build to be executed by only opening the index.html file, to create a new build run `npm run build`
 
 ## Running unit tests
 
