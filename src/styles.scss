@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+$colors: #ecb07e, #c2d17e, #6b9bc1, #66894f, #cf5375;
+@for $i from 1 through length($colors) {
+  $c: nth($colors, $i);
+  .list-item:nth-child(#{$i}),
+  .city-#{$i} {
+    background-color: $c;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="weather city-{{ index + 1 }}">
+  <app-weather-tile [weather]="weather"></app-weather-tile>
+</div>
+<div class="forecast" *ngIf="forecast">
+  <app-forecast [forecast]="forecast"></app-forecast>
+</div>

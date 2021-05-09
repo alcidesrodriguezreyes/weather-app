@@ -1,0 +1,11 @@
+:host {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--tile-color);
+}
+
+.weather {
+  height: 80%;
+}

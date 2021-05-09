@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  padding: 0 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  .th {
+    text-transform: lowercase;
+  }
+}
+.th {
+  text-align: center;
+  width: 100%;
+}
+.icons {
+  @extend .header;
+}
+.td {
+  @extend .th;
+}
+.temperatures {
+  @extend .header;
+}
+
+@media (max-width: 575.98px) {
+  :host {
+    padding: 0;
+    overflow: hidden;
+  }
+  .th {
+    width: 20%;
+    flex-shrink: 0;
+    word-break: break-word;
+    white-space: break-spaces;
+  }
+}

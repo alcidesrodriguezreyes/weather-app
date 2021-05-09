@@ -1,0 +1,21 @@
+<div class="table">
+  <div class="header">
+    <div class="th" *ngFor="let item of forecast?.list">
+      {{ item.dt | epoch: "hh:mm aa" }}
+    </div>
+  </div>
+  <div class="icons">
+    <div class="td icon" *ngFor="let item of forecast?.list">
+      <img
+        alt="icon"
+        src="http://openweathermap.org/img/wn/{{ item.weather[0].icon }}.png"
+      />
+    </div>
+  </div>
+
+  <div class="temperatures">
+    <div class="td temperature" *ngFor="let item of forecast?.list">
+      {{ item.main.temp | temperature }}
+    </div>
+  </div>
+</div>

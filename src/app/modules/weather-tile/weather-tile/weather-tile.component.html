@@ -1,0 +1,35 @@
+<div class="date">
+  {{ weather?.dt | epoch: "EEEE, LLLL, d" }}
+</div>
+
+<div class="place">{{ weather?.name }}</div>
+
+<div class="description">
+  <div
+    class="description-item"
+    *ngFor="let item of weather?.weather | slice: 0:1"
+  >
+    <div class="description">
+      {{ item.description }}
+    </div>
+    <div class="icon">
+      <img
+        alt="icon"
+        src="http://openweathermap.org/img/wn/{{ item.icon }}@4x.png"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="temperature">{{ weather?.main?.temp | temperature }}</div>
+
+<div class="extra-details">
+  <div class="wind">
+    <span class="material-icons"> air </span>
+    {{ weather?.wind?.speed | speed }}
+  </div>
+  <div class="humidity">
+    <span class="material-icons"> water_drop </span>
+    {{ weather?.main?.humidity }}%
+  </div>
+</div>

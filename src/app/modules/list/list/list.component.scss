@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-basis: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  display: flex;
+}
+
+li,
+li > a {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  min-width: calc(100% - var(--treshhold));
+  height: 100%;
+  color: var(--tile-color);
+}
+
+li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dots {
+  position: absolute;
+  bottom: 50px;
+}
+
+@media (min-width: 1200px) {
+  ul {
+    justify-content: space-between;
+    overflow: auto;
+  }
+  li {
+    min-width: calc(100% / 5);
+  }
+}

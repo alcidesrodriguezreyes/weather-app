@@ -1,0 +1,16 @@
+<div class="list-container">
+  <ul>
+    <li *ngFor="let item of weatherList" class="list-item">
+      <a
+        [routerLink]="
+          '/city/' + item.name + ',' + item.sys.country.toLowerCase()
+        "
+      >
+        <app-weather-tile [weather]="item"></app-weather-tile>
+      </a>
+    </li>
+  </ul>
+  <div class="dots">
+    <div class="dot" *ngFor="let item of weatherList"></div>
+  </div>
+</div>

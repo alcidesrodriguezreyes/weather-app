@@ -28,7 +28,7 @@
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/assets/scss/bootstrap-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
